@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(90deg, #f4913d, #9b6b9b);
+            padding: 15px;
+
+        }
+
+        .box {
+            position: absolute;
+            left: 10%;
+            right: 20%;
+            top: 15%;
+            border-radius: 5px;
+            width: 50%;
+        }
+
+        fieldset {
+            border: 3px solid darkorchid;
+        }
+
+        legend {
+            border: 1px solid darkorchid;
+            padding: 10px;
+            text-align: center;
+            background-color: darkorchid;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .inputbox {
+            position: relative;
+        }
+
+        .inputUser {
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            width: 100%;
+            outline: none;
+            letter-spacing: 1px;
+
+        }
+
+        .label-input {
+            position: static;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: 5s;
+        }
+
+        .inputUser:focus~.label-input,
+        .inputUser:valid~.label-input {
+            top: -20px;
+            font-size: 12px;
+            color: darkorchid;
+        }
+        p {
+            font-family: Arial, Helvetica, sans-serif, pink;
+        }
+           
+    </style>
+</head>,
+
+<body>
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <legend><b>Formulario Clientes</b></legend>
+                <br><br>
+                <div class="input-Box">
+                    <label class="label-input" for="nome">Nome completo</label>
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                </div>
+                <br><br>
+                <div class="input-Box">
+                    <label class="label-input" for="email">Instagram</label>
+                    <input type="email" name="email" id="email" class="inputUser" required>
+                </div>
+                <br><br>
+                <div class="input-Box">
+                    <label class="label-input" for="telefone">Telefone</label>
+                    <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <label class="label-input" for="cidade">Cidade</label>
+                    <input type="text" name="cidade" id="cidade" class="inputUser" required>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <label class="label-input" for="estado">Estado</label>
+                    <input type="text" name="estado" id="estado" class="inputUser" required>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <label class="label-input" for="endereco">Endereço</label>
+                    <input type="text" name="endereco" id="endereco" class="inputUser" required>
+                </div><br><br>
+                <div>
+                    <p><b>Sexo</b></p>
+                    <input type="radio" id="femenino" name="genero" value="femenino">
+                    <label for="femenino">Femenino</label>
+                    <input type="radio" id="masculino" name="genero" value="masculino">
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" id="outro" name="genero" value="outro">
+                    <label for="outro">Outro</label>
+                </div><br><br>
+                <div class="inputBox">
+                    <label for="data_procedimento"><b>Data do procedimento:</b></label>
+                    <input type="date" name="data_procedimento" id="data_procedimento" class="inputUser" required>
+                </div>
+                <br><br>
+                <div class="perguntas">
+                    <div class="inputBox">
+                        <label for="costuma_usar_maquiagem_e_rimel"><b>Acostuma usar maquiagem e rímel?</b></label>
+                        <input type="radio" id="costuma_usar_maquiagem_e_rimel" name="pergunta" value="sim">Sim
+                        <input type="radio" id="costuma_usar_maquiagem_e_rimel" name="pergunta" value="nao">Não
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="e_gestante_ou_esta_em_processo_de_amamentacao"><b>É gestante ou esta em processo de
+                                amamentaçao ?</b></label>
+                        <input type="radio" id="e_gestante_ou_esta_em_processo_de_amamentacao" name="pergunta"
+                            value="sim">Sim
+                        <input type="radio" id="e_gestante_ou_esta_em_processo_de_amamentacao" name="pergunta"
+                            value="nao">Não
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="sofre_de_algum_problema_com_tiroides"><b>Sofre de algum problema com tiroides
+                                ?</b></label>
+                        <input type="radio" id="sofre_de_algum_problema_com_tiroides" name="pergunta" value="sim">Sim
+                        <input type="radio" id="sofre_de_algum_problema_com_tiroides" name="pergunta" value="nao">Não
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="realizou_algum_procedimento_cirurgico_nos_olhos_recentemente"><b>Realizou algum
+                                procedimento cirurgico nos olhos recentemente ?</b></label>
+                        <input type="radio" id="realizou_algum_procedimento_cirurgico_nos_olhos_recentemente"
+                            name="pergunta" value="sim">Sim
+                        <input type="radio" id="realizou_algum_procedimento_cirurgico_nos_olhos_recentemente"
+                            name="pergunta" value="nao">Não
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="esta_em_tratamanto_oncologico"><b>Esta em tratamento oncológico ?</b></label>
+                        <input type="radio" id="esta_em_tratamanto_oncologico" name="pergunta" value="sim">Sim
+                        <input type="radio" id="esta_em_tratamanto_oncologico" name="pergunta" value="nao">Não
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="passou_por_algum_procedimento_cirurgico_recentemente"><b>Passou por algum
+                                procedimento
+                                cirúrgico recentemente ?</b></label>
+                        <input type="radio" id="passou_por_algum_procedimento_cirurgico_recentemente" name="pergunta"
+                            value="sim">Sim
+                        <input type="radio" id="passou_por_algum_procedimento_cirurgico_recentemente" name="pergunta"
+                            value="nao">Não
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="tem_ovarios_policisticos"><b>Tem ovarios policísticos ?</b></label>
+                        <input type="radio" id="tem_ovarios_policisticos" name="pergunta" value="sim">Sim
+                        <input type="radio" id="tem_ovarios_policisticos" name="pergunta" value="nao">Não
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="sofre_de_depressao"><b>Sofre de depressão ?</b></label>
+                        <input type="radio" id="sofre_de_depressao" name="pergunta" value="sim">Sim
+                        <input type="radio" id="sofre_de_depressao" name="pergunta" value="nao">Não
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="costuma_chorar_com_frecuencia"><b>Costuma chorar com frequência ?</b></label>
+                        <input type="radio" id="costuma_chorar_com_frecuencia" name="pergunta" value="sim">Sim
+                        <input type="radio" id="costuma_chorar_com_frecuencia" name="pergunta" value="nao">Não
+                    </div>
+                    <br>
+                    <div class="inputBox">
+                        <label for="sofre_de_alopecia"><b>Sofre de alopecia?</b></label>
+                        <input type="radio" id="sofre_de_alopecia" name="pergunta" value="sim">Sim
+                        <input type="radio" id="sofre_de_alopecia" name="pergunta" value="nao">Não
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="sofre_de_psoriase"><b>Sofre de psoríase ?</b></label>
+                        <input type="radio" id="sofre_de_psoriase" name="pergunta" value="sim">Sim
+                        <input type="radio" id="sofre_de_psoriase" name="pergunta" value="nao">Não
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="dorme_de_lado"><b>Dorme de lado ?</b></label>
+                        <input type="radio" id="dorme_de_lado" name="pergunta" value="sim">Sim
+                        <input type="radio" id="dorme_de_lado" name="pergunta" value="nao">Não
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="faz_uso_de_anabolizantes"><b>Faz uso de anabolizantes ?</b></label>
+                        <input type="radio" id="faz_uso_de_anabolizantes" name="pergunta" value="sim">Sim
+                        <input type="radio" id="faz_uso_de_anabolizantes" name="pergunta" value="nao">Não
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="pratica_atividade_fisica_com_frecuencia"><b>Pratica actividade fisica com frecuência
+                                ?</b>
+                        </label>
+                        <input type="radio" id="pratica_atividade_fisica_com_frecuencia" name="pergunta" value="sim">Sim
+                        <input type="radio" id="pratica_atividade_fisica_com_frecuencia" name="pergunta" value="nao">Não
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="possui_algum_tipo_de_alergia_a_esmaltes_cosmeticos_ou_alguma_outra_substancia"><b>Possui
+                                algum tipo de alergia a esmaltes, cosméticos ou alguma outra substancia ?</b></label>
+                        <input type="radio"
+                            id="possui_algum_tipo_de_alergia_a_esmaltes_cosmeticos_ou_alguma_outra_substancia"
+                            name="pergunta" value="sim">Sim
+                        <input type="radio"
+                            id="possui_algum_tipo_de_alergia_a_esmaltes_cosmeticos_ou_alguma_outra_substancia"
+                            name="pergunta" value="nao">Não
+                        <label for="especifique"><br><b>Especifique</b></label>
+                        <input class="inputUser" type="text" id="especifique" name="pergunta" value="">
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="possui_glaucoma_blefarite_ou_algum_outro_problema_ocular"><b>Posuui glaucoma,
+                                blefarite
+                                ou algum outro problema ocular ?</b></label>
+                        <input type="radio" id="possui_glaucoma_blefarite_ou_algum_outro_problema_ocular"
+                            name="pergunta" value="sim">Sim
+                        <input type="radio" id="possui_glaucoma_blefarite_ou_algum_outro_problema_ocular"
+                            name="pergunta" value="nao">Não
+                        <label for="especifique"><br><b>Especifique</b></label>
+                        <input class="inputUser" type="text" id="especifique" name="pergunta" value="">
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="apresenta_açgum_problema_nutricional"><b>Apresenta algum problema nutricional
+                                ?</b></label>
+                        <input type="radio" id="apresenta_açgum_problema_nutricional" name="pergunta" value="sim">Sim
+                        <input type="radio" id="apresenta_açgum_problema_nutricional" name="pergunta" value="nao">Não
+                        <label for="especifique"><br><b>Especifique</b></label>
+                        <input class="inputUser" type="text" id="especifique" name="pergunta" value="">
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <p><b>Sofre de alguma doença metabólica como por exemplo.</b></p>
+                        <input type="radio" id="colesterol_alto_dislipidemia" name="doenca"
+                            value="colesterol_alto_dislipidemia">
+                        <label for="colesterol_alto_dislipidemia">Colesterol alto (Dislipemia)</label><br>
+
+                        <input type="radio" id="gordura_no_figado_esteatose" name="doenca"
+                            value="gordura_no_figado_esteatose">
+                        <label for="colesterol_alto_dislipidemia">Colesterol alto (Esteatose)</label><br>
+
+                        <input type="radio" id="obesidade" name="doenca" value="obesidade">
+                        <label for="obesidade">Obesidade</label><br>
+
+                        <input type="radio" id="diabetes" name="doenca" value="diabetes">
+                        <label for="diabetes">Diabetes</label><br>
+
+                        <input type="radio" id="osteoporose" name="doenca" value="osteoporose">
+                        <label for="osteoporose">Osteoporose</label><br>
+
+                        <input type="radio" id="neuma_das_anteriores" name="doenca" value="neuma_das_anteriores">
+                        <label for="neuma_das_anteriores">Neuma das anteriores</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <p><b>Sofre algum transtorno alimentar como por exemplo.</b></p>
+                        <input type="radio" id="anorexia" name="doenca" value="anorexia">
+                        <label for="anorexia">Anorexia</label><br>
+
+                        <input type="radio" id="bulimia" name="doenca" value="bulimia">
+                        <label for="bulimia">Bulimia</label><br>
+
+                        <input type="radio" id="neuma_das_anteriores" name="doenca" value="neuma_das_anteriores">
+                        <label for="neuma_das_anteriores">Neuma das anteriores</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="faz_quimioterapia">Faz quimioterapia ?</label>
+                        <input type="radio" id="faz_quimioterapia" name="pergunta" value="sim">Sim
+                        <input type="radio" id="faz_quimioterapia" name="pergunta" value="nao">Não
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="faz_uso_de_algum_medicamento_psiquiatrico"><b>Faz uso de algum medicamento
+                                psiquiátrico ?</b></label>
+                        <input type="radio" id="faz_uso_de_algum_medicamento_psiquiatrico" name="pergunta"
+                            value="sim">Sim
+                        <input type="radio" id="faz_uso_de_algum_medicamento_psiquiatrico" name="pergunta"
+                            value="nao">Não
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="fez_bariatrica"><b>Fez bariátrica ?</b></label>
+                        <input type="radio" id="fez_bariatrica" name="pergunta" value="sim">Sim
+                        <input type="radio" id="fez_bariatrica" name="pergunta" value="nao">Não
+                        <label for="especifique"><br><b>Especifique</b></label>
+                        <input class="inputUser" type="text" id="especifique" name="pergunta" value="">
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="algum_outro_problema_que_seja_necessario_informar_antes_do_preocedimento"><b>Algum
+                                outro problema que seja necessário informar antes do procedimento ?<br></b></label>
+                        <input type="radio"
+                            id="algum_outro_problema_que_seja_necessario_informar_antes_do_preocedimento"
+                            name="pergunta" value="sim">Sim
+                        <input type="radio"
+                            id="algum_outro_problema_que_seja_necessario_informar_antes_do_preocedimento"
+                            name="pergunta" value="nao">Não
+                        <label for="especifique"><br><b>Especifique</b></label>
+                        <input class="inputUser" type="text" id="especifique" name="pergunta" value="">
+                    </div>
+                    <br><br>
+
+                    <p><b>Confirmo a veracidade das informaçoes por mim prestadas e me comprometo a seguir as
+                        recomendaçoes a mim prestadas, e caso eu não as cumpra toma para mim toda a responsabilidade
+                        caso o procedimento não se apresente de forma esperada. Autorizo a realicaçao do
+                        procedimento e o registro fotográfico do "Antes" e "Depôs", para documentaçao da
+                        professiobal. A declaraçaon antes mencionada é verdadeira, não cabendo a professional
+                        responsabilidade por informaçoes ómitidas nesta avaliação.</b></p>
+                    <div>
+                        <input type="checkbox" name="registro" id="registro">
+                        <label classs= "termos" for="registro">Aceito todos os <b> termos e condiçoes</b></label>
+                    </div>
+
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
